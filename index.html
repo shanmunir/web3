@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab 1.1 – Wallet Connect</title>
+    <style>
+      body { font-family: system-ui, Arial; max-width: 680px; margin: 40px auto; line-height: 1.5; }
+      button { padding: 10px 16px; border-radius: 10px; border: 1px solid #ddd; cursor: pointer; }
+      #out { padding: 14px; border: 1px solid #eee; border-radius: 12px; margin-top: 16px; }
+      code { background: #f6f6f6; padding: 2px 6px; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>Lab 1.1 – Connect Wallet & Show Balance</h1>
+    <p>Network: <strong>Sepolia (testnet)</strong></p>
+    <button id="connect">Connect MetaMask</button>
+    <div id="out">
+      <div><strong>Address:</strong> <span id="addr">–</span></div>
+      <div><strong>Chain ID:</strong> <span id="chain">–</span></div>
+      <div><strong>Balance:</strong> <span id="bal">–</span></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
