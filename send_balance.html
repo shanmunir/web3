@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Read & Send ETH (Sepolia)</title>
+  <style>
+    body { font-family: system-ui, Arial; max-width: 760px; margin: 40px auto; line-height: 1.55; }
+    button,input { padding: 10px 12px; border-radius: 10px; border: 1px solid #ddd; }
+    section { border: 1px solid #eee; border-radius: 12px; padding: 16px; margin: 18px 0; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; }
+    label { display:block; font-weight:600; margin-top: 8px; }
+    #log { white-space: pre-wrap; background: #f7f7f8; padding: 10px; border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Read & Send ETH (Sepolia)</h1>
+  <p>Make sure MetaMask is on <b>Sepolia</b>. Chain ID should be <code>11155111</code>.</p>
+
+  <section>
+    <button id="connect">🔌 Connect MetaMask</button>
+    <div class="row">
+      <div><b>Me (address):</b> <span id="me">–</span></div>
+      <div><b>Chain ID:</b> <span id="chain">–</span></div>
+      <div><b>My Balance:</b> <span id="myBal">–</span></div>
+    </div>
+    <div class="row" style="margin-top:10px;">
+      <button id="switch">Switch/Add Sepolia</button>
+      <button id="refresh">Refresh Balances</button>
+    </div>
+  </section>
+
+  <section>
+    <h3>🔎 Read balance of any address</h3>
+    <label>Address</label>
+    <div class="row">
+      <input id="addrIn" placeholder="0x... or paste address" size="50" />
+      <button id="check">Check Balance</button>
+    </div>
+    <div style="margin-top:8px;"><b>Balance:</b> <span id="addrBal">–</span></div>
+  </section>
+
+  <section>
+    <h3>💸 Send ETH</h3>
+    <label>Recipient (address)</label>
+    <input id="to" placeholder="0x..." size="60" />
+    <label>Amount (ETH)</label>
+    <input id="amount" placeholder="0.001" />
+    <div class="row" style="margin-top:10px;">
+      <button id="send">Send</button>
+      <button id="estimate">Estimate Gas & Fees</button>
+    </div>
+    <div style="margin-top:8px;"><b>Tx Hash:</b> <span id="tx">–</span></div>
+  </section>
+
+  <section>
+    <h3>🪵 Log</h3>
+    <div id="log">–</div>
+  </section>
+
+  <script type="module" src="/send_balance.js"></script>
+</body>
+</html>
