@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { JsonRpcProvider, Contract } from 'ethers';
-import { ABI } from './abi.js';
+import { ABI } from './abi.mjs';
 
 const provider = new JsonRpcProvider(process.env.SEPOLIA_RPC_URL);
 const contract = new Contract(process.env.CONTRACT_ADDRESS, ABI, provider);
