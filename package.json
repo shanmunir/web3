@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/shanmunir/web3#readme",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "ethers": "^6.15.0",
     "vite": "^7.0.6"
   }
