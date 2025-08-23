@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { JsonRpcProvider, Wallet, Contract } from 'ethers';
-import { ABI } from './abi.mjs';
+import { abi } from './abi.mjs';
 
 const RPC  = process.env.SEPOLIA_RPC_URL || "http://127.0.0.1:8545";
 const PK   = process.env.PRIVATE_KEY;
@@ -14,7 +14,7 @@ if (!PK || !ADDR) {
 
 const provider = new JsonRpcProvider(RPC);
 const wallet   = new Wallet(PK, provider);
-const contract = new Contract(ADDR, ABI, wallet);
+const contract = new Contract(ADDR, abi, wallet);
 
 async function assertHasCode(address) {
   const code = await provider.getCode(address);

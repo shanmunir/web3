@@ -1,5 +1,5 @@
-// abi.js
-export const ABI = [
+// abi.js Application Binary Interface
+export const abi = [
 	{
 		"inputs": [
 			{
