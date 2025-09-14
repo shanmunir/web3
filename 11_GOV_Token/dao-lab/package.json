@@ -1,0 +1,26 @@
+{
+  "name": "my-oapp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/00_deploy.ts --network localhost",
+    "propose:local": "hardhat run scripts/01_propose.ts --network localhost",
+    "vote:local": "hardhat run scripts/02_vote.ts --network localhost",
+    "execute:local": "hardhat run scripts/03_queue_execute.ts --network localhost"
+  },
+  "devDependencies": {
+    "hardhat": "^3.0.3",
+    "@nomicfoundation/hardhat-viem": "^2.0.0",
+    "typescript": "^5.9.2",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.14.9",
+    "dotenv": "^17.2.1"
+  },
+  "dependencies": {
+    "viem": "^2.21.0",
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
