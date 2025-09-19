@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Hardhat: Run script (localhost, stacks)",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["hardhat", "--show-stack-traces", "run", "--network", "localhost", "scripts/mint.ts"],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Hardhat: Test (stacks)",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["hardhat", "--show-stack-traces", "test"],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
